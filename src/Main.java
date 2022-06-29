@@ -8,8 +8,8 @@ public class Main {
         agendaGenerics.add(new Contato("Nicole", "4483392"));
         agendaGenerics.add(new Contato("Odete", "8234723847"));
 
-        Character letra = 'o';
-        filtrarAgendaGenerics(agendaGenerics, (Contato t) -> 0==Character.compare(t.getNome().toLowerCase().charAt(0), 'o'));
+        Character letra = 'n';
+        filtrarAgendaGenerics(agendaGenerics, t -> t.getNome().toLowerCase().charAt(0) == letra);
     }
 
     public static <T> void filtrarAgendaGenerics (ArrayList<T> agenda, Predicate<T> tester){
